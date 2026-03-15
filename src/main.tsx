@@ -1,13 +1,10 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cadastro from "./pages/Cadastro";
+// src/main.tsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
-        <Route path="/cadastro" element={<Cadastro />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
+createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+        <App />
+    </StrictMode>
+);
